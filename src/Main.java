@@ -1,4 +1,6 @@
+import java.util.Scanner;
 public class Main {
+    static Scanner keyboard = new Scanner(System.in);
     public static void main(String[] args) {
 
         String[][] gameBoardTicTacToe = {{" ", "|", " ", "|", " "},
@@ -6,6 +8,13 @@ public class Main {
                                         {" ", "|", " ", "|", " "},
                                         {"-", "+", "-", "+", "-"},
                                         {" ", "|", " ", "|", " "}};
+
+        System.out.print("Enter the position: ");
+        int pos = keyboard.nextInt();
+
+        if(pos == 1) {
+            gameBoardTicTacToe[0][0] = "X";
+        }
 
         printGameBoard(gameBoardTicTacToe);
     }

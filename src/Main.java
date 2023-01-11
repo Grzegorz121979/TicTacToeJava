@@ -11,11 +11,11 @@ public class Main {
     }
 
     private static void printGameBoard(String[][] gameBoard) {
-        for(int i = 0; i < gameBoard.length; i++) {
-            System.out.println();
-            for (int j = 0; j < gameBoard[i].length; j ++) {
-                System.out.print(gameBoard[i][j]);
+        for (String[] row : gameBoard) {
+            for(String column : row) {
+                System.out.print(column);
             }
+            System.out.println();
         }
     }
 }

@@ -27,6 +27,13 @@ public class Main {
             }
             takePosition(gameBoard, playerPos, "player");
 
+            String result = winning();
+            result = winning();
+            if (result.length() > 0) {
+                System.out.println(result);
+                break;
+            }
+
             int compPosition = myRandom.nextInt(9) + 1;
             while (playerPosition.contains(compPosition) || computerPosition.contains(compPosition)) {
                 compPosition = keyboard.nextInt();
@@ -35,8 +42,11 @@ public class Main {
 
             printGameBoard(gameBoard);
 
-            String result = winning();
-            System.out.println(result);
+            result = winning();
+            if (result.length() > 0) {
+                System.out.println(result);
+                break;
+            }
         }
     }
 
